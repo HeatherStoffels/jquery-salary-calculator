@@ -3,7 +3,6 @@ $(document).ready(inReady);
 function inReady() {
   console.log("in ready");
 }
-// create an array of employee objects
 
 // create 5 input fields
 //employee.firstName
@@ -16,8 +15,14 @@ function inReady() {
 
 //make sure none of the inputs are blank
 //if unput(s) are black make .alert
+// create an array of employee objects that pushes
+//submitted results
 
+//display results of all 5 fields in a table
+
+//make a delete button that removes and entire employee
+//object from the table
 // add salaries to report monthly cost
 // divide annual salary by 12
+//output cost in totalMonthly
 //if monthly salary is over 20,000, add red background to
-// total monthly cost
