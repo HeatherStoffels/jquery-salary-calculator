@@ -1,9 +1,20 @@
 $(document).ready(inReady);
-
+let employees = [];
 function inReady() {
   console.log("in ready");
+  $("#submitEmployee").on("click", addEmployee);
 }
-
+function addEmployee() {
+  console.log("in button click");
+  let employeeToAdd = {
+    firstName: $("#firstName").val(),
+    lastName: $("#lastName").val(),
+    idNumber: $("#idNumber").val(),
+    title: $("#title").val(),
+    annualSalary: $("#annualSalary").val(),
+  };
+  employees.push(employeeToAdd);
+}
 // create 5 input fields
 //employee.firstName
 //employee.lastName
