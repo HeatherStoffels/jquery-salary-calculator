@@ -1,11 +1,12 @@
 $(document).ready(inReady);
 let employees = [];
 function inReady() {
-  console.log("in ready");
+  //   console.log("in ready");
   $("#submitEmployee").on("click", addEmployee);
 }
 function addEmployee() {
   console.log("in button click");
+
   let employeeToAdd = {
     firstName: $("#firstName").val(),
     lastName: $("#lastName").val(),
@@ -14,13 +15,26 @@ function addEmployee() {
     annualSalary: $("#annualSalary").val(),
   };
   employees.push(employeeToAdd);
+  displayEmployees();
+
+  $("#firstName").val("");
+  $("#lastName").val("");
+  $("#idNumber").val("");
+  $("#title").val("");
+  $("#annualSalary").val("");
 }
-// create 5 input fields
-//employee.firstName
-//employee.lastName
-//employee.idNumber
-//employee.jobTitle
-//employee.annualSalary
+
+function displayEmployees() {
+  console.log("attempting to display");
+
+  let el = $("#employeeObject");
+
+  for (let index = 0; index < employees.length; index++) {
+    el.append(`<li> ${employees[index].firstName} 
+    ${employees[index].lastName} ${employees[index].idNumber} 
+    ${employees[index].title} ${employees[index].annualSalary}</li>`);
+  }
+}
 
 //create button to take in all 5 inputs
 
