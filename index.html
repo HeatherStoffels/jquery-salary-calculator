@@ -6,7 +6,7 @@
     <title>Salary Calculator</title>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="client.js"></script>
-    <link rel="stylesheet" href="bootstrap.css" />
+    <!-- <link rel="stylesheet" href="bootstrap.css" /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -23,6 +23,25 @@
             <input id="annualSalary" placeholder="Annual Salary" type="text" />
             <button id="submitEmployee">Submit</button>
           </h2>
+        </div>
+        <div id="employeeTable">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Annual Salary</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="employeeObject" >
+                
+              </tbody>
+            </table>
+            
+          </table>
         </div>
       </h1>
       <div id="displayEmployeesDiv">

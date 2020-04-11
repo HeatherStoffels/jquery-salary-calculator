@@ -28,11 +28,20 @@ function displayEmployees() {
   console.log("attempting to display");
 
   let el = $("#employeeObject");
+  el.empty();
+  let monthlyBudget = 0;
 
   for (let index = 0; index < employees.length; index++) {
-    el.append(`<li> ${employees[index].firstName} 
-    ${employees[index].lastName} ${employees[index].idNumber} 
-    ${employees[index].title} ${employees[index].annualSalary}</li>`);
+    el.append(
+      `<tr><td>${employees[index].firstName}</td>
+      <td>${employees[index].lastName}</td>
+      <td>${employees[index].idNumber}</td>
+      <td>${employees[index].title}</td>
+      <td>${employees[index].annualSalary}</td></tr>`
+    );
+    monthlyBudget += parseInt(employees[index].annualSalary);
+
+    console.log(monthlyBudget / 12);
   }
 }
 
