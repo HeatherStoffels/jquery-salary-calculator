@@ -6,12 +6,11 @@
     <title>Salary Calculator</title>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="client.js"></script>
-    <!-- <link rel="stylesheet" href="bootstrap.css" /> -->
+    <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      Add Employee
       <h1>
         Employee
         <div id="employeeInDiv">
@@ -36,18 +35,19 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody id="employeeObject" >
-                
-              </tbody>
-            </table>
-            
+            <tbody id="employeeObject"></tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Monthly Budget: $</td>
+                <td id="monthlyBudget"></td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </h1>
-      <div id="displayEmployeesDiv">
-        <h1>Display Empoyees</h1>
-        <ul id="employeeObject"></ul>
-      </div>
     </header>
   </body>
 </html>

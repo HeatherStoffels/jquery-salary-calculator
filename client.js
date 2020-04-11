@@ -37,12 +37,27 @@ function displayEmployees() {
       <td>${employees[index].lastName}</td>
       <td>${employees[index].idNumber}</td>
       <td>${employees[index].title}</td>
-      <td>${employees[index].annualSalary}</td></tr>`
+      <td>${employees[index].annualSalary}</td>
+      <td><button class="delete">Delete</button></td></tr>`
     );
-    monthlyBudget += parseInt(employees[index].annualSalary);
 
-    console.log(monthlyBudget / 12);
+    monthlyBudget += parseInt(employees[index].annualSalary);
   }
+  monthlyBudget /= 12;
+  if (monthlyBudget > 20000) {
+    $("#monthlyBudget").css("background-color", "red");
+    $("#monthlyBudget").html(monthlyBudget);
+  } else {
+    $("#monthlyBudget").html(monthlyBudget);
+    //   console.log(monthlyBudget);
+  }
+  $(".delete").on("click", deleteRow);
+}
+
+function deleteRow() {
+  //   console.log($(this).parent().parent());
+
+  $(this).parent().parent().remove();
 }
 
 //create button to take in all 5 inputs
